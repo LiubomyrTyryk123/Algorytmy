@@ -1,7 +1,16 @@
-liczby = [1,2,3,4,5,6,7,8,9,10]
-liczba = int(input("Podaj wartość:"))
+a=int(input("Podaj a : "))
+b=int(input("Podaj b : "))
+if b==0:
+    print("NWD jest: ",a)
 
-if liczba in liczby:
-    print(f"Wartość {liczba} występuje w tablicy.")
-else:
-    print(f"Wartość {liczba} nie występuje w tablicy.")
+elif a or b<0:
+    print("Nie może tak być! ")
+
+else: 
+
+    while b>0:
+        reszta = a%b
+        a=b
+        b=reszta
+    print("NWD jest: ",a )
+    
