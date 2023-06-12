@@ -1,11 +1,11 @@
-n = int(input("Podaj liczbę n: "))
-ilosc_ujemnych = 0
-liczby = []
-i = 0
-while i < n:
-    liczba= int(input(f"Podaj {i+1}. liczbę: "))
-    liczby.append(liczba)
-    if liczba< 0:
-        ilosc_ujemnych += 1
-    i+=1
-print(f"Ilość liczb ujemnych w ciągu wynosi: {ilosc_ujemnych}")
+def odwroc_tablice(tablica):
+    i = 0
+    j = len(tablica) - 1
+    while i < j:
+        tablica[i], tablica[j] = tablica[j], tablica[i]
+        i += 1
+        j -= 1
+    return tablica
+tablica = [1, 2, 3, 4, 5]
+odwrocona_tablica = odwroc_tablice(tablica)
+print(odwrocona_tablica)
