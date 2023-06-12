@@ -1,16 +1,12 @@
-a=int(input("Podaj a : "))
-b=int(input("Podaj b : "))
-if b==0:
-    print("NWD jest: ",a)
+numbers = [1, 2, 3, 11, 21, 111, 231]
 
-elif a or b<0:
-    print("Nie może tak być! ")
+def lexicographic_sort(numbers):
+    sorted_numbers = []
+    while len(numbers) > 0:
+        smallest = min(numbers)
+        sorted_numbers.append(smallest)
+        numbers.remove(smallest)
 
-else: 
+    return sorted_numbers
 
-    while b>0:
-        reszta = a%b
-        a=b
-        b=reszta
-    print("NWD jest: ",a )
-    
+print(lexicographic_sort(numbers))
